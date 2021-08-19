@@ -19,7 +19,7 @@
 /*========== header area ==========*/
 header {
     position: relative;
-    height: 300px;
+    height: 230px;
     /* background-color: yellow; */
 }
 
@@ -38,7 +38,6 @@ header {
 }
 
 .topMenu li>a {
-    
     margin-left: 17px;
     line-height: 40px;
     color: white;
@@ -100,6 +99,11 @@ main {
     background-color: beige;
 }
 
+
+/* mainImg */
+.mainImg img {
+    width: 100%;
+}
 
 
 
