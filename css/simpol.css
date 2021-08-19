@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* ===== 그리드 시스템 confix ===== */
+.confix { 
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 0 10px;
+    /* background-color: gold; */
+}
+
+.vBox::before, .vBox::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*========== header area ==========*/
+header {
+    position: relative;
+    height: 300px;
+    /* background-color: yellow; */
+}
+
+/* topMenu */
+.logoMenu {
+    height: 40px;
+    background-color: #335348;
+}
+
+.logoMenu .topMenu {
+    float: right;
+}
+
+.topMenu li {
+    float: left;
+}
+
+.topMenu li>a {
+    margin-top: 17px;
+    margin-left: 17px;
+    color: white;
+    font-size: 11px;
+}
+
+.topMenu li>a:hover { 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* logo */
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 95px;
+    transform: translateX(-50%);
+}
+
+
+/* mainMenu */
+.mainMenu {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    /* width: 855px; */
+}
+
+.gnb {
+    width: 918px;
+    margin: 0 auto;
+    /* color: pink; */
+    height: 20px;
+}
+
+.gnb>li {
+    float: left;
+    margin: 0 28px;
+}
+
+.gnb>li>a {
+    color: #253b33;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.gnb>li>a:hover { /*윗 박스로 가운데서 양쪽으로 퍼지는 hover효과 넣기*/
+    border-top: 2px solid #253b33;
+}
+
+
+
+
+/*========== content area ==========*/
+main {
+    width: 100%;
+    height: 500px;
+    padding-top: 28px;
+    background-color: beige;
+}
+
+
+
+
+/*========== footer area ==========*/
+footer {
+    clear: both;
+    width: 100%;
+    height: 260px;
+    background-color: #868584;
+}
