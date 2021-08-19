@@ -38,8 +38,9 @@ header {
 }
 
 .topMenu li>a {
-    margin-top: 17px;
+    
     margin-left: 17px;
+    line-height: 40px;
     color: white;
     font-size: 11px;
 }
@@ -70,7 +71,7 @@ header {
     width: 918px;
     margin: 0 auto;
     /* color: pink; */
-    height: 20px;
+    /* height: 20px; */
 }
 
 .gnb>li {
@@ -96,7 +97,6 @@ header {
 main {
     width: 100%;
     height: 500px;
-    padding-top: 28px;
     background-color: beige;
 }
 
