@@ -7,7 +7,7 @@
 }
 
 html, body {
-    font-size: 16px;
+    font-size: 15px;
     font-family:  '맑은 고딕';
     color: #335348;
 }
@@ -27,12 +27,11 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
-    font-weight: normal;
+    font-size: 21px;
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 h4 {
