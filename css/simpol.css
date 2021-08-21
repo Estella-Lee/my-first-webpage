@@ -135,5 +135,78 @@ footer {
     clear: both;
     width: 100%;
     height: 260px;
-    background-color: #868584;
+    /* background-color: #868584; */
+}
+
+/* footerMenuArea */
+.footMenuArea {
+    width: 100%;
+    height: 32px;
+    margin-top: 45px;
+    border-top: 1px solid #253b33;
+    border-bottom: 1px solid #253b33;
+}
+
+.footerMenu {
+    float: right;
+}
+
+.footerMenu li{
+    float: left;
+}
+
+.footerMenu li>a {
+    margin-left: 17px;
+    line-height: 32px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.footerMenu li>a:hover {
+    text-decoration: underline;
+}
+
+/* footInfo */
+.footInfo {
+    clear: both;
+    margin-top: 18px;
+    line-height: 20px;
+    /* background-color: lavender; */
+}
+
+.footInfo .footLogo {
+    float: left;
+    margin: 0 28px;
+}
+
+.footInfo .adrCopyTxt {
+    float: left;
+    margin-left: 20px;
+}
+
+.adrCopyTxt p {
+    font-size: 10px;
+}
+
+.footInfo .pdtInfo {
+    float: right;
+}
+
+.pdtInfo ol>li {
+    list-style-type: lower-latin;
+    font-size: 10px;
+}
+
+/* footBottom */
+.footBottom {
+    width: 100%;
+    height: 66px;
+    margin-top: 28px;
+    background-color: #335348;
+}
+.footBottom p {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
 }
