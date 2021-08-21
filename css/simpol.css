@@ -94,8 +94,9 @@ header {
 
 /*========== content area ==========*/
 main {
+    position: relative;
     width: 100%;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 
@@ -124,6 +125,10 @@ main {
     margin-right: 0;
 }
 
+/* eventBanner */
+.eventBanner ul>li {
+    margin-bottom: 20px;
+}
 
 /*========== footer area ==========*/
 footer {
