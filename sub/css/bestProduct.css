@@ -105,60 +105,6 @@ main {
     /* background-color: beige; */
 }
 
-/* mainImg */
-.mainImg img {
-    width: 100%;
-    margin-bottom: 52px;
-}
-
-/* products */
-.pdtTitle {
-    margin-bottom: 20px;
-    text-align: center;
-    letter-spacing: 8px;
-}
-
-.products .pdtList>li {
-    position: relative;
-    float: left;
-    width: 252px;
-    margin-right: 13px;
-    padding-bottom: 40px;
-    margin-bottom: 50px;
-}
-
-.pdtList>li:last-child {
-    margin-right: 0;
-}
-
-/* eventBanner */
-.eventBanner ul>li:first-child {
-    margin-bottom: 20px;
-}
-
-
-/* topBtn */
-.topBtn {
-    margin-top: 110px;
-    padding-bottom: 45px;
-}
-
-.topBtn a {
-    float: right;
-    width:70px;
-    height: 70px;
-    line-height: 29px;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    background-color: #335348;
-    transition: opacity 0.3s ease-in;
-    opacity: 0.5;
-}
-
-.topBtn a:hover {
-    opacity: 1;
-}
 
 
 
