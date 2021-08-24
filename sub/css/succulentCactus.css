@@ -105,7 +105,24 @@ main {
     /* background-color: beige; */
 }
 
+/* subCategory */
+.pdtBox>.subCategory>img {
+    width: 100%;
+    margin-bottom: 65px;
+}
 
+/* pdtList */
+.pdtList li {
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    color: #253b33;
+}
+
+.pdtList li:last-child {
+    margin-right: 0;
+}
 
 
 /*========== footer area ==========*/
