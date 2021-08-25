@@ -114,15 +114,83 @@ main {
 /* pdtList */
 .pdtList li {
     float: left;
-    margin-right: 13px;
+    margin-left: 13px;
     margin-bottom: 10px;
     padding-bottom: 50px;
     color: #253b33;
 }
 
-.pdtList li:last-child {
-    margin-right: 0;
+/* .pdtList li:last-child {
+    margin-left: 0;
+} */
+
+/* numBar */
+.pdtBox .numBar {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 16px;
 }
+
+/* arrow 공통소스 */
+.numBar .leftArrow>a, .rightArrow>a {
+    width: 25px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.numBar .leftArrow>a:hover, .rightArrow>a:hover {
+    
+}
+
+
+.numBar .leftArrow {
+    float: left;
+}
+
+.numBar .num {
+    float: left;
+}
+
+.numBar .num>li {
+    float: left;
+}
+
+.numBar .num>li>a {
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.numBar .num>li>a:hover {
+    
+}
+
+.numBar .rightArrow {
+    float: right;
+}
+
+
+/* topBtn */
+.topBtn a {
+    float: right;
+    width: 70px;
+    height: 70px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #335348;
+    transition: opacity 0.3s ease-in;
+    opacity: 0.5;
+}
+
+.topBtn a:hover {
+    opacity: 1;
+}
+
 
 
 /*========== footer area ==========*/

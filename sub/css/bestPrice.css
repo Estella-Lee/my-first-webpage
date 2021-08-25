@@ -105,6 +105,42 @@ main {
     /* background-color: beige; */
 }
 
+/* subCategory */
+.subCategory>img {
+    width: 100%;
+    margin-bottom: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* topBtn */
+.topBtn a {
+    float: right;
+    width: 70px;
+    height: 70px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #335348;
+    transition: opacity 0.3s ease-in;
+    opacity: 0.5;
+}
+
+.topBtn a:hover {
+    opacity: 1;
+}
+
 
 
 
