@@ -114,6 +114,7 @@ main {
 /* pdtList */
 .pdtList li {
     float: left;
+    width: 252px;
     margin-left: 13px;
     margin-bottom: 10px;
     padding-bottom: 50px;

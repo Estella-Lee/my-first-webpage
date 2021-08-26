@@ -111,15 +111,32 @@ main {
     margin-bottom: 65px;
 }
 
+/* pdtList */
+
+.pdtBox .pdtList li {
+    float: left;
+    height: 413px;
+    margin-right: 30px;
+    margin-bottom: 65px;
+}
 
 
+.pdtList li:last-child {
+    margin-right: 0;
+}
 
 
+.pdtList li:hover {
+    border: 1px solid #ccc;
+} /* 임시!!!!*/
 
+.pdtList li:first-child:hover {
+    border: 0;
+}
 
-
-
-
+.pdtList .pdtTxt h3{
+    margin: 8px 0;
+}
 
 
 
