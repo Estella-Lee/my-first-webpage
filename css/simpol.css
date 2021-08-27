@@ -111,28 +111,13 @@ main {
     margin-bottom: 52px;
 }
 
-/* products */
-.pdtTitle {
-    margin-bottom: 20px;
-    text-align: center;
-    letter-spacing: 8px;
-}
 
-.products .pdtList>li {
-    /* position: relative; */
-    float: left;
-    width: 252px;
-    margin-right: 16px;
-    padding-bottom: 40px;
-    margin-bottom: 50px;
-    color: #253b33;
-}
-
-.pdtList>li:last-child {
-    margin-right: 0;
-}
 
 /* eventBanner */
+/* .eventBanner img {
+    width: 100%;
+} */
+
 .eventBanner ul>li:first-child {
     margin-bottom: 20px;
 }
