@@ -10,8 +10,8 @@
 }
 
 .vBox::before, .vBox::after {
-    content: '';
     display: block;
+    content: '';
     clear: both;
 }
 
@@ -105,11 +105,65 @@ main {
     /* background-color: beige; */
 }
 
+/*=== main 공통 ===*/
+.secTitle {
+    margin-bottom: 28px;
+    font-size: 24px;    
+}
+
+
+
 /* mainImg */
 .mainImg img {
+    display: block;
     width: 100%;
-    margin-bottom: 52px;
+    max-width: 100%;
+    margin-bottom: 60px;
 }
+
+/* ourProducts */
+.ourProducts .secTitle {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.ourProducts .ourProductsList li {
+    width: 100%;
+}
+
+.ourProducts .ourProductsList li a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ourProducts .ourProductsList li a::after{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #335348;
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.ourProducts .ourProductsList li a:hover::after {
+    opacity: 0.80;
+}
+
+
+.ourProducts .ourProductsList li img {
+    display: block;
+}
+
 
 
 
