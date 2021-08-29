@@ -115,7 +115,6 @@ main {
 
 /* mainImg */
 .mainImg img {
-    display: block;
     width: 100%;
     max-width: 100%;
     margin-bottom: 60px;
@@ -130,39 +129,79 @@ main {
     text-align: center;
 }
 
-.ourProducts .ourProductsList li {
+.ourProducts .ourProductsList>li {
+    float: left;
+}
+
+.ourProductsList .pdtInfo {
+    display: none;
+}
+
+
+.ourProductsList .bundle {
+    width: 385px;
+    height: 560px;
+}
+
+.bundle li {
+    margin-bottom: 20px;
+}
+
+
+.ourProducts .ourProductsList .basic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 675px;
+    height: 560px;
+    padding-left: 20px;
+}
+
+.ourProductsList li a{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+.ourProductsList li a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* z-index: 10; */
+	width: 100%;
+	height: 100%;
+	background: #335348;
+	content: "";
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.ourProductsList li a:hover::before {
+	opacity: 0.90;
+}
+
+
+
+
+/* newProducts */
+.newProducts .secTitle {
     width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-bottom: 28px;
+    text-align: center;
 }
 
-.ourProducts .ourProductsList li a{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.ourProducts .ourProductsList li a::after{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background: #335348;
-    content: '';
-    opacity: 0;
-    transition: all 0.2s;
-}
-
-.ourProducts .ourProductsList li a:hover::after {
-    opacity: 0.80;
+.newProductsList .pdtInfo {
+    display: none;
 }
 
 
-.ourProducts .ourProductsList li img {
-    display: block;
-}
+
+
+
 
 
 
