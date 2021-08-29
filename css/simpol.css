@@ -106,37 +106,49 @@ main {
 }
 
 /*=== main 공통 ===*/
-.secTitle {
-    margin-bottom: 28px;
-    font-size: 24px;    
+.products {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    
+.products .pdtInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    opacity: 0;
+    transition: 0.5s ease;
+    color: #fff;
+}
+
+.products li a:hover .pdtInfo {
+    opacity: 1; 
 }
 
 
-
-/* mainImg */
+/* mainImg 영역 */
 .mainImg img {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
-/* ourProducts */
+
+/* ourProducts 영역 */
 .ourProducts .secTitle {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-.ourProducts .ourProductsList>li {
-    float: left;
+.ourProducts .ourProductsList {
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.ourProductsList .pdtInfo {
-    display: none;
-}
-
 
 .ourProductsList .bundle {
     width: 385px;
@@ -184,32 +196,121 @@ main {
 
 
 
-/* newProducts */
+/* newProducts 영역 */
 .newProducts .secTitle {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
     margin-top: 110px;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-.newProductsList .pdtInfo {
-    display: none;
+.newProducts .newProductsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newProductsList .bundle {
+    width: 520px;
+    height: 456px;
+}
+
+.newProducts .newProductsList .basic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 540px;
+    height: 456px;
+    padding-left: 20px;
+}
+
+.newProductsList li a{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+.newProductsList li a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* z-index: 10; */
+	width: 100%;
+	height: 100%;
+	background: #335348;
+	content: "";
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.newProductsList li a:hover::before {
+	opacity: 0.90;
 }
 
 
 
+/* herb 영역 */
+.herb .secTitle {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
+.herb .herbList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    height: 890px;
+}
+
+.herbList li a{
+	position: relative;
+	width:100%;
+	height:100%;
+}
+
+.herbList li a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* z-index: 10; */
+	width: 100%;
+	height: 100%;
+	background: #335348;
+	content: "";
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+.herbList li a:hover::before {
+	opacity: 0.90;
+}
 
 
 
 
 
 /* eventBanner */
-/* .eventBanner img {
+.eventBanner .secTitle {
     width: 100%;
-} */
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.eventBanner img{
+    width: 100%;
+    background-color: pink;
+}
 
 .eventBanner ul>li:first-child {
     margin-bottom: 20px;
