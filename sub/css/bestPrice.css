@@ -106,7 +106,7 @@ main {
 }
 
 /* subCategory */
-.subCategory>img {
+.subCategory img {
     width: 100%;
     margin-bottom: 65px;
 }
