@@ -123,7 +123,7 @@ main {
     color: #fff;
 }
 
-.products li a:hover .pdtInfo {
+.products div a:hover .pdtInfo {
     opacity: 1; 
 }
 
@@ -155,7 +155,7 @@ main {
     height: 560px;
 }
 
-.bundle li {
+.bundle div {
     margin-bottom: 20px;
 }
 
@@ -170,13 +170,13 @@ main {
     padding-left: 20px;
 }
 
-.ourProductsList li a{
+.ourProductsList div a{
 	position: relative;
 	width:100%;
 	height:100%;
 }
 
-.ourProductsList li a::before {
+.ourProductsList div a::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -189,7 +189,7 @@ main {
 	transition: all 0.2s;
 }
 
-.ourProductsList li a:hover::before {
+.ourProductsList div a:hover::before {
 	opacity: 0.90;
 }
 
@@ -209,7 +209,12 @@ main {
 .newProducts .newProductsList {
     display: flex;
     flex-wrap: wrap;
+    /* background-color: yellow; */
 }
+
+/* .newProductsList img {
+    width: 100%;
+} */
 
 .newProductsList .bundle {
     width: 520px;
@@ -226,13 +231,13 @@ main {
     padding-left: 20px;
 }
 
-.newProductsList li a{
+.newProductsList div a{
 	position: relative;
 	width:100%;
 	height:100%;
 }
 
-.newProductsList li a::before {
+.newProductsList div a::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -245,7 +250,7 @@ main {
 	transition: all 0.2s;
 }
 
-.newProductsList li a:hover::before {
+.newProductsList div a:hover::before {
 	opacity: 0.90;
 }
 
@@ -264,10 +269,10 @@ main {
 .herb .herbList {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
     justify-content: space-between;
     align-content: space-between;
     width: 100%;
-    height: 890px;
 }
 
 .herbList li a{
