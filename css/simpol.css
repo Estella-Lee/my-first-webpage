@@ -155,7 +155,7 @@ main {
     height: 560px;
 }
 
-.bundle div {
+.bundle div:first-child {
     margin-bottom: 20px;
 }
 
