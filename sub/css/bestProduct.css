@@ -196,9 +196,9 @@ main {
 
 
 /* bestReview 영역 */
-.bestReview .reviewTop {
-    /* background-color: pink; */
-}
+/* .bestReview .reviewTop {
+    background-color: pink;
+} */
 
 .reviewTop {
     display: flex;
@@ -284,6 +284,7 @@ main {
     margin-bottom: 15px;
     font-size: 17px;
     font-family: 'Gamja Flower', cursive;
+    color: #253b33;
 }
 
 .reviewBtm .pdtInfo .goShop {
