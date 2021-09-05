@@ -7,6 +7,9 @@
     margin: 0 auto;
     padding: 0 10px;
     /* background-color: gold; */
+    /* 반응형 웹 
+    width: 90%;
+    max-width: 1080px; */
 }
 
 .vBox::before, .vBox::after {
