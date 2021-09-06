@@ -105,23 +105,141 @@ main {
     /* background-color: beige; */
 }
 
+
 .joinForm {
+    padding-top: 20px;
+}
+
+/* 회원가입 영역 */
+.joinForm h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.joinForm form {
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 50px;
+    /* background-color: pink; */
 }
 
 table, td {
-    border: 1px solid black;
+    border: 0;
     border-collapse: collapse;
     margin: 0 auto;
 }
 
-.termsP {
-    width: 600px;
-    height: 100px;
-    overflow: scroll;
-    word-wrap: break-word;
+table {
+    margin-bottom: 30px;
 }
+
+th {
+    width: 200px;
+    padding: 15px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.rowSize01 {
+    height: 25px;
+}
+
+.rowSize02 {
+    height: 75px;
+}
+
+td {
+    width: 600px;
+    height: 40px;
+    padding-left: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+input {
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    font-size: 12px;
+    border-color: #ddd;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    vertical-align: -5px;
+}
+
+span {
+    line-height: 22px;
+    font-size: 13px;
+}
+
+td p {
+    font-size: 12px;
+}
+
+/* termsWrap 영역 */
+.termsWrap h2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.terms {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    padding-left: 50px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.terms h3 {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.termsP {
+    width: 700px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    overflow: scroll;
+    background-color: #fff;
+}
+
+.termsCheck {
+    margin-bottom: 40px;
+}
+
+button[type="submit"] {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center; 
+    color: #335348;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    background-color: #335348;
+}
+
 
 
 /*========== footer area ==========*/
