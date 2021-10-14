@@ -278,10 +278,11 @@ main {
     width: 100%;
 }
 
-.herbList li a{
+.herbList li a {
+    display: block;
 	position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
 .herbList li a::before {
@@ -300,9 +301,6 @@ main {
 .herbList li a:hover::before {
 	opacity: 0.90;
 }
-
-
-
 
 
 /* eventBanner */
@@ -354,7 +352,6 @@ main {
 footer {
     clear: both;
     width: 100%;
-    height: 260px;
     /* background-color: #868584; */
 }
 
@@ -425,6 +422,7 @@ footer {
     margin-top: 28px;
     background-color: #335348;
 }
+
 .footBottom p {
     padding-top: 10px;
     color: #fff;

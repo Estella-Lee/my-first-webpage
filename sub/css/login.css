@@ -113,6 +113,7 @@ main {
     padding-bottom: 10px;
     border-bottom: 3px solid #335348;
     text-align: center;
+    font-size: 24px;
 }
 
 form {
@@ -198,7 +199,6 @@ input {
 footer {
     clear: both;
     width: 100%;
-    height: 260px;
     /* background-color: #868584; */
 }
 
