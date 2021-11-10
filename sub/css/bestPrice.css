@@ -140,10 +140,25 @@ main {
 
 
 
+/*========== footer area ==========*/
+footer {
+    clear: both;
+    width: 100%;
+    /* background-color: #868584; */
+}
+
 /* topBtn */
-.topBtn a {
-    float: right;
-    width: 70px;
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    cursor: pointer;
+}
+
+#topBtn span {
+    display: block;
+    width:70px;
     height: 70px;
     line-height: 29px;
     text-align: center;
@@ -154,18 +169,8 @@ main {
     opacity: 0.5;
 }
 
-.topBtn a:hover {
+#topBtn span:hover {
     opacity: 1;
-}
-
-
-
-
-/*========== footer area ==========*/
-footer {
-    clear: both;
-    width: 100%;
-    /* background-color: #868584; */
 }
 
 /* footerMenuArea */

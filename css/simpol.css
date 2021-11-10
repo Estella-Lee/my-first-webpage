@@ -3,13 +3,12 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1080px;
+    /* width: 1080px; */
     margin: 0 auto;
     padding: 0 10px;
     /* background-color: gold; */
-    /* 반응형 웹 
     width: 90%;
-    max-width: 1080px; */
+    max-width: 1080px;
 }
 
 .vBox::before, .vBox::after {
@@ -323,14 +322,28 @@ main {
 }
 
 
-/* topBtn */
-.topBtn {
-    margin-top: 110px;
-    padding-bottom: 45px;
+
+
+
+/*========== footer area ==========*/
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    /* background-color: #868584; */
 }
 
-.topBtn a {
-    float: right;
+/* topBtn */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    cursor: pointer;
+}
+
+#topBtn span {
+    display: block;
     width:70px;
     height: 70px;
     line-height: 29px;
@@ -342,17 +355,8 @@ main {
     opacity: 0.5;
 }
 
-.topBtn a:hover {
+#topBtn span:hover {
     opacity: 1;
-}
-
-
-
-/*========== footer area ==========*/
-footer {
-    clear: both;
-    width: 100%;
-    /* background-color: #868584; */
 }
 
 /* footerMenuArea */
@@ -420,7 +424,7 @@ footer {
     width: 100%;
     height: 66px;
     margin-top: 28px;
-    background-color: #335348;
+    background-color: #335348; 
 }
 
 .footBottom p {

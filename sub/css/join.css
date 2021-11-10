@@ -249,6 +249,32 @@ footer {
     /* background-color: #868584; */
 }
 
+/* topBtn */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    cursor: pointer;
+}
+
+#topBtn span {
+    display: block;
+    width:70px;
+    height: 70px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #335348;
+    transition: opacity 0.3s ease-in;
+    opacity: 0.5;
+}
+
+#topBtn span:hover {
+    opacity: 1;
+}
+
 /* footerMenuArea */
 .footMenuArea {
     width: 100%;
