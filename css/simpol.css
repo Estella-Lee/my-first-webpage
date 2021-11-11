@@ -3,10 +3,7 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    /* width: 1080px; */
     margin: 0 auto;
-    padding: 0 10px;
-    /* background-color: gold; */
     width: 90%;
     max-width: 1080px;
 }
@@ -32,21 +29,26 @@ header {
 }
 
 .logoMenu .topMenu {
-    float: right;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.topMenu li {
-    float: left;
+.topMenu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 250px;
+    margin-left: auto;
 }
 
 .topMenu li>a {
-    margin-left: 17px;
     line-height: 40px;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
 }
 
-.topMenu li>a:hover { 
+.topMenu li:hover a { 
     font-weight: bold;
     text-decoration: underline;
 }
@@ -61,7 +63,7 @@ header {
 
 
 /* mainMenu */
-.mainMenu {
+.mainMenu { 
     position: absolute;
     top: 200px;
     width: 100%;
@@ -69,21 +71,18 @@ header {
 }
 
 .gnb {
-    width: 918px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
     margin: 0 auto;
     /* color: pink; */
     /* height: 20px; */
 }
 
-.gnb>li {
-    float: left;
-    margin: 0 28px;
-}
-
 .gnb>li>a {
     color: #253b33;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -91,10 +90,10 @@ header {
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: #335348;
     transform: scaleX(0);
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .gnb li:hover::before {
@@ -111,10 +110,10 @@ main {
 .products {
     position: relative;
     width: 100%;
-    height: 100%;
 }
     
 .products .pdtInfo {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -141,8 +140,6 @@ main {
 /* ourProducts 영역 */
 .ourProducts .secTitle {
     width: 100%;
-    max-width: 1080px;
-    margin: 0 auto;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -150,32 +147,61 @@ main {
 .ourProducts .ourProductsList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .ourProductsList .bundle {
-    width: 385px;
-    height: 560px;
+    flex-basis: 36.5%;
+    display: flex;
+    flex-direction: column;
 }
 
-.bundle div:first-child {
+.ourProductsList .bundle div img {
+    width: 100%;
     margin-bottom: 20px;
 }
 
-
 .ourProducts .ourProductsList .basic {
+    flex-basis: 61.25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    width: 675px;
-    height: 560px;
-    padding-left: 20px;
+}
+
+.basic .basicCol1 {
+    flex-basis: 65.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.basicCol1 .basicCol1-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.basicCol1-1 div {
+    flex-basis: 47.5%;
+}
+
+
+.basic div img {
+    width : 100%;
+    margin-bottom: 20px;
+}
+
+
+.basic .basicCol2 {
+    flex-basis: 31.15%;
 }
 
 .ourProductsList div a{
+    display: block;
 	position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
 }
 
 .ourProductsList div a::before {
@@ -188,20 +214,18 @@ main {
 	background: #335348;
 	content: "";
 	opacity: 0;
-	transition: all 0.2s;
+	transition: all .2s;
 }
 
 .ourProductsList div a:hover::before {
-	opacity: 0.90;
+	opacity: .9;
 }
-
 
 
 
 /* newProducts 영역 */
 .newProducts .secTitle {
     width: 100%;
-    max-width: 1080px;
     margin: 0 auto;
     margin-top: 110px;
     margin-bottom: 40px;
@@ -211,32 +235,37 @@ main {
 .newProducts .newProductsList {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: yellow; */
+    justify-content: space-between;
 }
 
-/* .newProductsList img {
-    width: 100%;
-} */
-
 .newProductsList .bundle {
-    width: 520px;
-    height: 456px;
+    flex-basis: 48.5%;
+}
+
+.newProductsList .bundle a {
+    width: 100%;
+}
+
+.newProductsList .bundle img {
+    width: 100%;
 }
 
 .newProducts .newProductsList .basic {
+    flex-basis: 49%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    width: 540px;
-    height: 456px;
-    padding-left: 20px;
+}
+
+.newProductsList .basic div{
+    flex-basis: 48%;
 }
 
 .newProductsList div a{
+    display: block;
 	position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
 }
 
 .newProductsList div a::before {
@@ -249,11 +278,15 @@ main {
 	background: #335348;
 	content: "";
 	opacity: 0;
-	transition: all 0.2s;
+	transition: all .2s;
 }
 
 .newProductsList div a:hover::before {
-	opacity: 0.90;
+	opacity: .9;
+}
+
+.newProductsList div img {
+    width: 100%;
 }
 
 
@@ -268,20 +301,31 @@ main {
     text-align: center;
 }
 
+.herbBanner {
+    width: 100%;
+}
+
+.herbBanner img {
+    width: 100%;
+}
+
 .herb .herbList {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     justify-content: space-between;
     align-content: space-between;
     width: 100%;
+    margin-top: 20px;
+}
+
+.herbList li {
+    flex-basis: 23.5%;
 }
 
 .herbList li a {
     display: block;
 	position: relative;
 	width: 100%;
-	height: 100%;
 }
 
 .herbList li a::before {
@@ -299,6 +343,10 @@ main {
 
 .herbList li a:hover::before {
 	opacity: 0.90;
+}
+
+.herbList li a img {
+    width: 100%;
 }
 
 
@@ -406,7 +454,7 @@ footer {
 }
 
 .adrCopyTxt p {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .footInfo .pdtInfo {
@@ -416,7 +464,7 @@ footer {
 .pdtInfo ol>li {
     list-style-type: decimal;
     list-style-position: inside;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 /* footBottom */
@@ -430,6 +478,6 @@ footer {
 .footBottom p {
     padding-top: 10px;
     color: #fff;
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
 }
