@@ -24,22 +24,28 @@ header {
 
 /* topMenu */
 .logoMenu {
-    height: 40px;
-    background-color: #335348;
+    width: 100%;
 }
 
 .logoMenu .topMenu {
     width: 100%;
-    margin: 0 auto;
+    height: 40px;
+    background-color: #335348;
 }
 
 .topMenu ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 30%;
+    width: 25%;
+    max-width: 350px;
     min-width: 250px;
     margin-left: auto;
+    margin-right: 10vw;
+}
+
+.topMenu li {
+    padding-left: 4px;
 }
 
 .topMenu li>a {
@@ -61,6 +67,51 @@ header {
     transform: translateX(-50%);
 }
 
+/* toggle button */
+.toggleBtn {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    padding-top: 22px;
+    cursor: pointer;
+}
+
+.toggleBtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.toggleBtn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+
+.toggleBtn.active span:first-child {
+    transform: translateY(10px) rotate(45deg);
+    transition: .5s;
+}
+
+.toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggleBtn.active span:last-child {
+    transform:  translateY(-10px) rotate(-45deg);
+    transition: .5s;
+}
+
+
+
 
 /* mainMenu */
 .mainMenu { 
@@ -75,8 +126,6 @@ header {
     justify-content: space-between;
     width: 75%;
     margin: 0 auto;
-    /* color: pink; */
-    /* height: 20px; */
 }
 
 .gnb>li>a {
@@ -93,12 +142,18 @@ header {
     height: 3px;
     background: #335348;
     transform: scaleX(0);
-    transition: transform 0.2s;
+    transition: transform .2s;
 }
 
 .gnb li:hover::before {
     transform: scaleX(1);
 }
+
+.mainMenu .copy {
+    display: none;
+    color: #fff;
+}
+
 
 /*========== content area ==========*/
 main {
@@ -480,4 +535,107 @@ footer {
     color: #fff;
     font-size: 11px;
     text-align: center;
+}
+
+
+
+/*==== 태블릿용 css ====*/
+@media screen and (max-width: 1024px) {
+    .topMenu {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .topMenu li {
+        padding-left: 1px;
+    }
+
+    .topMenu li>a {
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+        font-weight: normal;
+    }
+
+    /* toggle botton */
+    .toggleBtn {
+        display: block;
+    }
+
+    .mainMenu {
+        position: fixed;
+        top: 40px;
+        left: -100%;
+        width: 30vw;
+        background-color: #335348;
+        opacity: .98;
+        z-index: 1;
+        transition: all .5s;
+    }
+
+    .mainMenu.active {
+        left: 0;
+    }
+
+    /* main meneu */
+    .gnb {
+        display: none;
+    }
+
+    .mainMenu.active .gnb {
+        display: block;
+        height: 100vh;
+        padding-top: 5vh;
+        transition: all .5s;
+    }
+
+    .gnb li {
+        height: 5vh;
+    }
+
+    .gnb li::before {
+        display: none;
+    }
+
+    .gnb>li>a {
+        color: #fff;
+        text-align: center;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .gnb>li>a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .mainMenu .copy {
+        display: block;
+        position: absolute;
+        bottom: 20vh;
+        left: 40%;
+        color: #fff;
+    }
+}
+
+
+/*==== 모바일용 css ====*/
+@media screen and (max-width: 767px){
+    .topMenu li {
+        padding-left: 1px;
+    }
+
+    .mainMenu {
+        width: 50vw;
+    }
+
+    .mainMenu .copy {
+        left: 35%;
+    }
+}
+
+
+/*==== 모바일용 css (425이하) ====*/
+@media screen and (max-width: 424px) {
+
 }
