@@ -76,14 +76,6 @@ header {
 
 /* toggle button */
 .toggleBtn {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    padding-top: 22px;
-    cursor: pointer;
-}
-
-.toggleBtn {
     display: none;
     position: absolute;
     top: 0;
@@ -451,6 +443,7 @@ footer {
     bottom: 8%;
     right: 3%;
     cursor: pointer;
+    z-index: 10;
 }
 
 #topBtn span {
@@ -690,6 +683,7 @@ footer {
 
 /*==== 모바일용 css ====*/
 @media screen and (max-width: 767px) {
+    /*====== header area ======*/
     .topMenu li {
         padding-left: 1px;
     }
@@ -702,6 +696,7 @@ footer {
         left: 35%;
     }
 
+    /*====== content area ======*/
     .ourProductsList .bundle {
         flex-basis: 46%;
     }

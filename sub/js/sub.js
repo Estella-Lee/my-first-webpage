@@ -1,3 +1,24 @@
+// 모바일 토글 버튼 관련
+const toggleBtn = document.querySelector('.toggleBtn');
+const mainMenu = document.querySelector('.mainMenu');
+const menu = document.querySelector('.gnb');
+
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('active');
+    mainMenu.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+menu.addEventListener('click', removeToggleMenu);
+window.addEventListener('resize', removeToggleMenu);
+
+function removeToggleMenu() {
+    toggleBtn.classList.remove('active');
+    mainMenu.classList.remove('active');
+    menu.classList.remove('active');
+}
+
+
 // top 버튼 관련
 const topBtn = document.getElementById('topBtn');
 
@@ -18,42 +39,3 @@ topBtn.addEventListener('click', (e) => {
         window.scrollTo({top: 0, behavior: 'smooth'});
 })
 
-
-
-// window.onload = () => {
-//     const goTop = () => {
-//         window.addEventListener('scroll', () => {
-//             if (document.querySelector('html').scrollTop > 200) {
-//                 document.getElementsById('topBtn').style.display = 'block';
-//             } else {
-//                 document.getElementsById('topBtn').style.display = 'none';
-//             }
-//         });
-    
-//         document.getElementsById('topBtn').addEventListener('click', () => {
-//             window.scrollTo({
-//                 top: 0,
-//                 left: 0,
-//                 behavior: 'smooth'
-//             });
-//         })
-//     };
-//     goTop();
-// }
-
-
-
-// window.addEventListener('scroll', () => {
-//     let top = document.querySelector('topBtn');
-    
-//     if (this.scrollTop() > 200) {
-//         top.style.display = 'block';
-//     } else {
-//         top.style.display = 'none';
-//     }
-// });
-
-// top.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     window.scrollTo({top: 0, behavior: 'smooth'});
-// })

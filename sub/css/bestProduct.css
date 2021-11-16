@@ -3,10 +3,9 @@
 /* ===== 그리드 시스템 confix ===== */
 .confix { 
     position: relative;
-    width: 1080px;
     margin: 0 auto;
-    padding: 0 10px;
-    /* background-color: gold; */
+    width: 90%;
+    max-width: 1080px;
 }
 
 .vBox::before, .vBox::after {
@@ -19,32 +18,43 @@
 /*========== header area ==========*/
 header {
     position: relative;
-    height: 230px;
+    height: 240px;
     /* background-color: yellow; */
 }
 
 /* topMenu */
 .logoMenu {
+    width: 100%;
+}
+
+.logoMenu .topMenu {
+    width: 100%;
     height: 40px;
     background-color: #335348;
 }
 
-.logoMenu .topMenu {
-    float: right;
+.topMenu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 25%;
+    max-width: 350px;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: 10vw;
 }
 
 .topMenu li {
-    float: left;
+    padding-left: 4px;
 }
 
 .topMenu li>a {
-    margin-left: 17px;
     line-height: 40px;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
 }
 
-.topMenu li>a:hover { 
+.topMenu li:hover a { 
     font-weight: bold;
     text-decoration: underline;
 }
@@ -53,13 +63,55 @@ header {
 .logo {
     position: absolute;
     left: 50%;
-    top: 95px;
+    top: 48%;
     transform: translateX(-50%);
+    width: 40%;
+    text-align: center;
+}
+
+.logo img {
+    width: 100%;
 }
 
 
+/* toggle button */
+.toggleBtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.toggleBtn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.toggleBtn.active span:first-child {
+    transform: translateY(10px) rotate(45deg);
+    transition: .5s;
+}
+
+.toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggleBtn.active span:last-child {
+    transform:  translateY(-10px) rotate(-45deg);
+    transition: .5s;
+}
+
+
+
 /* mainMenu */
-.mainMenu {
+.mainMenu { 
     position: absolute;
     top: 200px;
     width: 100%;
@@ -67,21 +119,17 @@ header {
 }
 
 .gnb {
-    width: 918px;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
     margin: 0 auto;
-    /* color: pink; */
-    /* height: 20px; */
-}
-
-.gnb>li {
-    float: left;
-    margin: 0 28px;
+    margin-top: 10px;
 }
 
 .gnb>li>a {
     color: #253b33;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -89,14 +137,20 @@ header {
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
+    margin-bottom: 1px;
     background: #335348;
     transform: scaleX(0);
-    transition: transform 0.3s;
+    transition: transform .2s;
 }
 
 .gnb li:hover::before {
     transform: scaleX(1);
+}
+
+.mainMenu .copy {
+    display: none;
+    color: #fff;
 }
 
 /*========== content area ==========*/
@@ -315,6 +369,7 @@ footer {
     bottom: 8%;
     right: 3%;
     cursor: pointer;
+    z-index: 10;
 }
 
 #topBtn span {
@@ -406,4 +461,175 @@ footer {
     color: #fff;
     font-size: 10px;
     text-align: center;
+}
+
+/*==== 태블릿용 css ====*/
+@media screen and (max-width: 1023px) {
+    .topMenu {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .topMenu li {
+        padding-left: 1px;
+    }
+
+    .topMenu li>a {
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+        font-weight: normal;
+    }
+
+    /* toggle botton */
+    .toggleBtn {
+        display: block;
+    }
+
+    .mainMenu {
+        position: fixed;
+        top: 40px;
+        left: -100%;
+        width: 30vw;
+        background-color: #335348;
+        opacity: .98;
+        z-index: 1;
+        transition: all .5s;
+    }
+
+    .mainMenu.active {
+        left: 0;
+    }
+
+    /* main meneu */
+    .gnb {
+        display: none;
+    }
+
+    .mainMenu.active .gnb {
+        display: block;
+        height: 100vh;
+        padding-top: 5vh;
+        transition: all .5s;
+    }
+
+    .gnb li {
+        height: 5vh;
+    }
+
+    .gnb li::before {
+        display: none;
+    }
+
+    .gnb>li>a {
+        color: #fff;
+        text-align: center;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .gnb>li>a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .mainMenu .copy {
+        display: block;
+        position: absolute;
+        bottom: 20vh;
+        left: 40%;
+        color: #fff;
+    }
+
+    /*===== content area =====*/
+
+
+
+
+    /*====== footer area ======*/
+    .footInfoBox {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .footLogo img {
+        width: 100%;
+    }
+
+    .adrCopyTxt {
+        font-size: 10px;
+    }
+
+    .footInfo .pdtInfo {
+        display: none;
+    }
+
+    .footBottom {
+        padding-top: 15px;
+    }
+
+    .footBottom p:first-child {
+        display: none;
+    }
+}
+
+/*==== 모바일용 css ====*/
+@media screen and (max-width: 767px) {
+     /*====== header area ======*/
+    .topMenu li {
+        padding-left: 1px;
+    }
+
+    .mainMenu {
+        width: 50vw;
+    }
+
+    .mainMenu .copy {
+        left: 35%;
+    }
+
+
+
+}
+
+
+/*==== 모바일용 css (425이하) ====*/
+@media screen and (max-width: 424px) {
+    /*====== header area ======*/
+    header {
+        height: 180px;
+    }
+
+
+    .topMenu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }    
+
+    .topMenu li {
+        margin-left: 10px;
+    }    
+
+    .topMenu .topHidden {
+        display: none;
+    }
+
+    /*====== content area ======*/
+   
+    
+
+
+
+    /*====== footer area ======*/
+    .footerMenu li>a {
+        margin-left: 5px;
+        line-height: 32px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+    
+    .adrCopyTxt p {
+        display: none;
+    }
 }
