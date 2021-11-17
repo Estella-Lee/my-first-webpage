@@ -246,17 +246,24 @@ main {
 
 /* numBar */
 .pdtBox .numBar {
-    width: 200px;
+    width: 30%;
     margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 25px;
-    height: 16px;
 }
 
 /* numBar 공통소스 */
-.numBar .leftArrow>a, .rightArrow>a {
-    width: 25px;
+.numBar {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftArrow, .rightArrow {
+    flex-basis: 30%;
     text-align: center;
+}
+
+.numBar .leftArrow>a, .rightArrow>a {
     font-size: 16px;
 }
 
@@ -264,16 +271,15 @@ main {
     color: orange;
 }
 
-.numBar .leftArrow, .numBar .num, .numBar .num>li {
-    float: left;
+.numBar .num {
+    flex-basis: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-
 .numBar .num>li>a {
-    width: 30px;
     font-size: 16px;
-    text-align: center;
-    line-height: 25px;
 }
 
 .numBar .num>li:first-child a{
@@ -283,10 +289,6 @@ main {
 
 .numBar .num>li>a:hover {
     color: orange;
-}
-
-.numBar .rightArrow {
-    float: right;
 }
 
 
@@ -481,7 +483,18 @@ footer {
     }
 
     /*===== content area =====*/
+    .pdtBox .gridContainer {
+        column-gap: 15px;
+        row-gap: 25px;
+    }
 
+    .gridContainer .pdtInfo h3 {
+        font-size: 14px;
+    }
+
+    .gridContainer .pdtInfo span {
+        font-size: 13px;
+    }
 
 
 
@@ -515,6 +528,10 @@ footer {
 /*==== 모바일용 css ====*/
 @media screen and (max-width: 767px) {
      /*====== header area ======*/
+     header {
+        height: 180px;
+    }
+
     .topMenu li {
         padding-left: 1px;
     }
@@ -527,7 +544,27 @@ footer {
         left: 35%;
     }
 
+    /*===== content area =====*/
+    .subCategory img {
+        margin-bottom: 35px;
+    }
 
+    .pdtBox .gridContainer {
+        column-gap: 12px;
+        row-gap: 15px;
+    }
+
+    .gridContainer .pdtInfo {
+        margin-top: 2px;
+    }
+
+    .gridContainer .pdtInfo h3 {
+        font-size: 12px;
+    }
+
+    .gridContainer .pdtInfo span {
+        font-size: 11px;
+    }
 
 }
 
@@ -536,7 +573,7 @@ footer {
 @media screen and (max-width: 424px) {
     /*====== header area ======*/
     header {
-        height: 180px;
+        height: 150px;
     }
 
 
@@ -555,7 +592,38 @@ footer {
     }
 
     /*====== content area ======*/
-   
+    .subCategory {
+        height: 80px;
+    }
+    
+    .pdtBox .gridContainer {
+        column-gap: 10px;
+        row-gap: 16px;
+    }
+
+    .gridContainer .pdtInfo {
+        position: relative;
+    }
+
+    .gridContainer .pdtInfo h3 {
+        font-size: 9px;
+    }
+
+    .gridContainer .pdtInfo span {
+        position: absolute;
+        left: 5px;
+        top: 12px;
+        font-size: 9px;
+    }
+
+    .pdtBox .numBar {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .numBar .num>li>a {
+        font-size: 9px;
+    }
     
 
 
