@@ -167,15 +167,36 @@ main {
 
 /* pdtList */
 
-.pdtBox .pdtList li {
-    float: left;
-    height: 413px;
-    margin-right: 30px;
-    margin-bottom: 65px;
+.pdtBox .pdtList {
+    display: flex;
+    flex-direction: column;
+}
+
+.pdtList .pdtRow1,
+.pdtList .pdtRow2,
+.pdtList .pdtRow3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2vw;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.pdtList div h2 img {
+    width: 100%;
+}
+
+.pdtList div ul {
+    display: flex;
+}
+
+.pdtList ul li {
+    flex-basis: 48%;
 }
 
 .pdtImg {
-    width: 100%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -189,23 +210,6 @@ main {
     transition: .3s;
 }
 
-
-.pdtList li:last-child {
-    margin-right: 0;
-}
-
-
-/* .pdtList li:hover {
-    border: 1px solid #ccc;
-}  */
-
-.pdtList li:first-child:hover {
-    border: 0;
-}
-
-.pdtList .pdtTxt h3{
-    margin: 8px 0;
-}
 
 
 
@@ -398,7 +402,11 @@ footer {
     }
 
     /*===== content area =====*/
-
+    .pdtList .pdtRow1,
+    .pdtList .pdtRow2,
+    .pdtList .pdtRow3 {
+        gap: 4vw;
+    }
 
 
 
@@ -432,6 +440,10 @@ footer {
 /*==== 모바일용 css ====*/
 @media screen and (max-width: 767px) {
      /*====== header area ======*/
+    header {
+        height: 180px;
+    }
+
     .topMenu li {
         padding-left: 1px;
     }
@@ -444,6 +456,24 @@ footer {
         left: 35%;
     }
 
+    /*====== content area ======*/
+    .subCategory img {
+        margin-bottom: 35px;
+    }
+
+    .pdtList .pdtRow1,
+    .pdtList .pdtRow2,
+    .pdtList .pdtRow3 {
+        gap: 4vw;
+    }
+
+    .pdtList .pdtTxt h3 {
+        font-size: 14px;
+    }
+
+    .pdtList .pdtTxt span {
+        font-size: 13px;
+    }
 
 
 }
@@ -453,7 +483,7 @@ footer {
 @media screen and (max-width: 424px) {
     /*====== header area ======*/
     header {
-        height: 180px;
+        height: 150px;
     }
 
 
@@ -472,9 +502,17 @@ footer {
     }
 
     /*====== content area ======*/
-   
+    .subCategory img {
+        margin-bottom: 20px;
+    }
     
+    .pdtList .pdtTxt h3 {
+        font-size: 11px;
+    }
 
+    .pdtList .pdtTxt span {
+        font-size: 10px;
+    }
 
 
     /*====== footer area ======*/
